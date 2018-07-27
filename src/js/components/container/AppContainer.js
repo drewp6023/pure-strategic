@@ -1,26 +1,30 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Jumbotron from "../presentational/Jumbotron";
+import FormContainer from "./FormContainer";
 
 class AppContainer extends Component {
-  constructor() {
-    super();
 
-    this.state = {
-
-    };
-
-    // this.handleChange = this.handleChange.bind(this);
-  }
-  // handleChange(event) {
-  //   this.setState({ [event.target.id]: event.target.value });
-  // }
   render() {
 
     // const {  } = this.state;
+    const style = {
+      textAlign: "center"
+    }
 
     return (
-      <Jumbotron title="ReactJS Boilerplate" />
+      <div>
+        <Jumbotron title="ReactJS Boilerplate" />
+
+        <div className="row">
+          <div className="col-md-4"></div>
+          <div className="col-xs-12 col-md-4">
+            <h3 style={style}>Please Authenticate</h3>
+            <FormContainer />
+          </div>
+          <div className="col-md-4"></div>
+        </div>
+      </div>
     );
   }
 }

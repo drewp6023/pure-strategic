@@ -17,13 +17,20 @@ module.exports = {
             loader: "html-loader"
           }
         ]
-      }
-    ],
-    loaders: [
+      },
       {
-        test: '/\.scss$/',
-        loaders: ['style-loader', 'css-loader', 'sass-loader']
-      }
+        test: /\.scss$/,
+        use: [{
+            loader: "style-loader"
+        }, {
+            loader: "css-loader"
+        }, {
+            loader: "sass-loader",
+            options: {
+                //includePaths: ["absolute/path/a", "absolute/path/b"]
+            }
+        }]        
+      }        
     ]
   },
   plugins: [

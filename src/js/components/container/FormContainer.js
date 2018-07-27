@@ -1,35 +1,59 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import Input from "../presentational/Input";
+import Button from "../presentational/Button";
 
 class FormContainer extends Component {
-  constructor() {
-    super();
-    this.state = {
-      seo_title: ""
-    };
-    this.handleChange = this.handleChange.bind(this);
+
+  state = {
+    username: "",
+    password: ""
   }
-  handleChange(event) {
-    this.setState({ [event.target.id]: event.target.value });
+
+  handleChange = event => {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
+
+    this.setState({ [name]: value });
   }
+
+  formSubmit = event => {
+    event.preventDefault();
+
+    
+  }
+
   render() {
-    const { seo_title } = this.state;
+    const { username, password } = this.state;
     return (
-      <form id="article-form">
+      <form id="authentication-form" onSubmit={this.formSubmit}>
         <Input
-          text="SEO title"
-          label="seo_title"
+          text="Username"
+          name="username"
+          label="username"
           type="text"
-          id="seo_title"
-          value={seo_title}
+          id="username"
+          value={username}
           handleChange={this.handleChange}
         />
+        <Input
+          text="Password"
+          name="password"
+          label="password"
+          type="password"
+          id="password"
+          value={password}
+          handleChange={this.handleChange}
+        />
+        <Button type="submit" buttonStyle="primary" text="Submit" />
+        <Button type="button" buttonStyle="warning" text="Clear" id="clear-button" />
       </form>
     );
   }
 }
 
-// export default FormContainer;
-const wrapper = document.getElementById("create-article-form");
-wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
+export default FormContainer;
+
+// const wrapper = document.getElementById("authentication-form");
+// wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
