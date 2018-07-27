@@ -18,6 +18,12 @@ module.exports = {
           }
         ]
       }
+    ],
+    loaders: [
+      {
+        test: '/\.scss$/',
+        loaders: ['style-loader', 'css-loader', 'sass-loader']
+      }
     ]
   },
   plugins: [
