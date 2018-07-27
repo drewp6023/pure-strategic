@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Input from "../presentational/Input";
 import Button from "../presentational/Button";
 
-class FormContainer extends Component {
+class AuthenticationFormContainer extends Component {
 
   state = {
     username: "",
@@ -21,7 +21,11 @@ class FormContainer extends Component {
   formSubmit = event => {
     event.preventDefault();
 
-    console.log('state', this.state);
+    console.log(this.state);
+
+    if (this.state.username.length > 0 && this.state.password == 'yesplease') {
+      history.push('/home');
+    }
   }
 
   render() {
@@ -53,7 +57,7 @@ class FormContainer extends Component {
   }
 }
 
-export default FormContainer;
+export default AuthenticationFormContainer;
 
 // const wrapper = document.getElementById("authentication-form");
-// wrapper ? ReactDOM.render(<FormContainer />, wrapper) : false;
+// wrapper ? ReactDOM.render(<AuthenticationFormContainer />, wrapper) : false;
