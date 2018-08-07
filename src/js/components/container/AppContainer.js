@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
-import { Route, Link } from 'react-router-dom';
-import Home from './HomeContainer';
+import ContactContainer from './ContactContainer';
+import NavContainer from './NavContainer';
+import ProductContainer from './ProductContainer';
+import FooterContainer from './FooterContainer';
 
 class AppContainer extends Component {
   render() {
     return (
-    	<Home />
+    	<div>
+    		<ContactContainer />
+    		<NavContainer />
+    		<ProductContainer />
+			<FooterContainer />    		
+    	</div>
     )
   }
 }
