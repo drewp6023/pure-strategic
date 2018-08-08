@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class ProductContainer extends Component {
   render() {
     return (
-      <section>
+      <section id="product-container">
 
       </section>
     )

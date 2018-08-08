@@ -3,9 +3,9 @@ import React, { Component } from 'react';
 class FooterContainer extends Component {
   render() {
     return (
-      <section>
+      <div>
 
-      </section>
+      </div>
     )
   }
 }
