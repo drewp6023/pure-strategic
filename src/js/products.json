@@ -1,0 +1,42 @@
+export default class Products {
+	{
+		imgUrl: '',
+		description: '',
+		price: ''	
+	},
+	{
+		imgUrl: '',
+		description: '',
+		price: ''	
+	},
+	{
+		imgUrl: '',
+		description: '',
+		price: ''	
+	},
+	{
+		imgUrl: '',
+		description: '',
+		price: ''	
+	},
+	{
+		imgUrl: '',
+		description: '',
+		price: ''	
+	},
+	{
+		imgUrl: '',
+		description: '',
+		price: ''	
+	},
+	{
+		imgUrl: '',
+		descriptizon: '',
+		price: ''	
+	},
+	{
+		imgUrl: '',
+		description: '',
+		price: ''	
+	}					
+}

@@ -1,16 +1,52 @@
+$ps-orange: #FF6F00;
+$ps-blue: #082868;
+
 html {
 	font-size: 16px;
 
 	.orange {
-		color: orange;
+		color: $ps-orange;
+	}
+
+	.flex-center {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.no-margin-bottom {
+		margin-bottom: 0 !important;
 	}
 
 	section {
 		height: 100vh;
 		width: 100vw;
 	}
-	
+
+	.header {
+		text-align: center;
+	}
+
+	.logo-btn {
+		color: white;
+		background: $ps-blue;
+		padding: 0.5rem;
+	}
+
+	#main-nav {
+		padding: 2rem 0;
+		border-top: 1px solid #eeeeee;
+		border-bottom: 1px solid #eeeeee;
+
+		.nav-item.active {
+			color: $ps-orange;
+		}
+	}
+
 	#contact-container {
+	    margin-top: 2rem;
+	    margin-bottom: 2rem;
+
 		#envelope-icon,
 		#phone-icon {
 			margin-right: 1rem;
@@ -26,8 +62,72 @@ html {
 		}
 	}
 
-	#product-container {
+	#featured-product-container {
+		background: white;
+		margin: 5rem 0;
+	}
+
+	#related-products-container {
 		background-color: #eeeeee;
+		padding: 2rem;
+	}
+
+	#newsletter-container {
+		background: white;
+		padding: 2rem;
+
+		input {
+			border: 0;
+		}
+
+		#join-us-btn {
+			padding: 0.5rem;
+			background-color: $ps-orange;
+			color: white;
+			font-style: italic;
+		}
+	}
+
+	#footer-container {
+		background: white;
+
+		.fa-credit-card {
+			width: 20%;
+		}
+	}
+
+	.product {
+		background: white;
+		padding: 1rem;
+		width: 23%;
+		float: left;
+
+		.product-img {
+
+		}
+
+		.product-title,
+		.product-price {
+			color: grey;
+		}
+
+		.product-img,
+		.product-title,
+		.product-price {
+			text-align: center;
+		}
+
+		.product-title {
+
+		}
+
+		.product-price {
+
+		}
+
+		> div {
+			margin-bottom: 1rem;
+		}
 	}
 }
 

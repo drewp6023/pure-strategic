@@ -6,7 +6,7 @@ class ContactContainer extends Component {
       <div id="contact-container" className="container">
 		<div className="row">
 			<div className="col-md-4">
-				<i id="envelope-icon" className="far fa-envelope orange" ></i>test@test.com
+				<i id="envelope-icon" className="far fa-envelope orange"></i>test@test.com
 				<i id="phone-icon" className="fas fa-phone orange"></i>333-333-3333
 			</div>		
 			<div className="col-md-6">
