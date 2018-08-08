@@ -1,3 +1,10 @@
+/*
+    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+*/
+$maven-pro: 'Maven Pro', sans-serif;
+$titillium: 'Titillium Web', sans-serif;
+
 $ps-orange: #FF6F00;
 $ps-blue: #082868;
 
@@ -7,6 +14,11 @@ html {
 	.orange {
 		color: $ps-orange;
 	}
+
+	h2,
+	h3 {
+		font-family: $titillium;
+	}	
 
 	.flex-center {
 		display: flex;
@@ -55,26 +67,50 @@ html {
 
 		}
 		#phone-icon {
+			/*margin-left: 1rem;*/
+		}
+		.social-icon:not(:first-child) {
 			margin-left: 1rem;
 		}
-		.social-icon {
-			margin-left: 1rem;
+
+		@media screen and (max-width: 600px) {
+			.row > div[class*='col'] {
+				text-align: center;
+			}			
 		}
 	}
 
 	#featured-product-container {
 		background: white;
 		margin: 5rem 0;
+
+		#product-details {
+			#increment,
+			#decrement {
+				cursor: pointer;
+			}
+
+			#price {
+				font-weight: bold;
+				color: grey;
+				font-family: $titillium;
+			}
+		}
 	}
 
 	#related-products-container {
 		background-color: #eeeeee;
 		padding: 2rem;
+
+		img {
+			display: inline-block;
+		}
 	}
 
 	#newsletter-container {
 		background: white;
 		padding: 2rem;
+		margin-top: 2rem;
 
 		input {
 			border: 0;
@@ -90,6 +126,7 @@ html {
 
 	#footer-container {
 		background: white;
+		margin-top: 5rem;
 
 		.fa-credit-card {
 			width: 20%;
@@ -98,12 +135,11 @@ html {
 
 	.product {
 		background: white;
-		padding: 1rem;
-		width: 23%;
-		float: left;
+/*		width: 23%;
+		float: left;*/
 
 		.product-img {
-
+			padding: 1rem;
 		}
 
 		.product-title,
@@ -127,6 +163,25 @@ html {
 
 		> div {
 			margin-bottom: 1rem;
+		}
+	}
+
+	#mini-pics-container {
+		margin-top: 3rem;
+
+		button {
+			img {
+				max-width: 5rem;
+				min-width: 5rem;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			margin-bottom: 2rem;
+
+			> div {
+				text-align: center;
+			}
 		}
 	}
 }

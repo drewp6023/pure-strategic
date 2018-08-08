@@ -3,7 +3,7 @@ import React from "react";
 import "../../../assets/scss/styles.scss";
 
 const Button = () => (
-	<a className="logo-btn" href="#">Logo</a>
+	<a className="logo-btn d-none d-md-block" href="#">Logo</a>
 );
 
 export default Button;
